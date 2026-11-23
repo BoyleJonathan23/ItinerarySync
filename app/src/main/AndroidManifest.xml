@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -10,41 +13,51 @@
         android:label="ItinerarySync"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ItinerarySync" >
+        android:theme="@style/Theme.ItinerarySync">
+
         <activity
             android:name=".UI.MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize" >
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".UI.VacationList"
             android:exported="false"
             android:parentActivityName=".UI.MainActivity"
-            android:label="Vacation List"
+            android:label="@string/vacation_list_title"
             android:windowSoftInputMode="adjustResize" />
+
         <activity
             android:name=".UI.VacationDetails"
             android:exported="false"
             android:parentActivityName=".UI.VacationList"
-            android:label="Vacation Details"
+            android:label="@string/vacation_details_title"
             android:windowSoftInputMode="adjustResize" />
+
         <activity
             android:name=".UI.ExcursionDetails"
             android:exported="false"
             android:parentActivityName=".UI.VacationDetails"
-            android:label="Excursion Details"
+            android:label="@string/excursion_details_title"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".UI.ReportActivity"
+            android:exported="false"
+            android:parentActivityName=".UI.VacationList"
+            android:label="@string/master_schedule_report"
             android:windowSoftInputMode="adjustResize" />
 
         <receiver
             android:name=".UI.MyReceiver"
             android:enabled="true"
-            android:exported="true" >
-        </receiver>
+            android:exported="false" />
+
     </application>
 
 </manifest>
