@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ItinerarySync</string>
+    <string name="enter">Enter</string>
+    <string name="scenic_view_of_the_maldives">Scenic view of the Maldives</string>
+    <string name="your_trips_organized">Your Trips, Organized.</string>
+    <string name="track_vacations_hotels_and_custom_excursions_in_one_place_with_built_in_schedule_alerts">Track vacations, hotels, and custom excursions in one place with built-in schedule alerts.</string>
 </resources>

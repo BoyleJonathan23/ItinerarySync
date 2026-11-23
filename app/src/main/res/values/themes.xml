@@ -10,12 +10,14 @@
     </style>
 
     <style name="CustomActionBarTheme" parent="@style/ThemeOverlay.Material3.ActionBar">
+        <item name="colorOnSurface">#1E293B</item>
         <item name="colorControlNormal">#1E293B</item>
         <item name="android:textColorPrimary">#1E293B</item>
     </style>
 
     <style name="CustomActionBar" parent="@style/Widget.Material3.ActionBar.Solid">
-        <item name="background">#E2E8F0</item>
+        <item name="background">@color/actionbar_bg</item>
+        <item name="titleTextColor">#1E293B</item>
         <item name="titleTextStyle">@style/CustomActionBarTitle</item>
     </style>
 
@@ -24,6 +26,11 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#1E293B</item>
+    </style>
+
+    <style name="RoundedImageCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
     </style>
 
     <style name="Theme.ItinerarySync" parent="Base.Theme.ItinerarySync" />

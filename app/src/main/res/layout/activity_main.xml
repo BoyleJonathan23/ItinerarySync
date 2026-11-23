@@ -8,17 +8,73 @@
     tools:context=".UI.MainActivity"
     android:background="#F8FAFC">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="153dp"
-        android:layout_height="61dp"
+    <!-- Hero Image -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivHeroBanner"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/scenic_view_of_the_maldives"
+        android:scaleType="centerCrop"
+        android:src="@drawable/maldives"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedImageCorners" />
+
+    <!-- App Headline -->
+    <TextView
+        android:id="@+id/tvWelcomeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Enter"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:typeface="normal"
-        app:backgroundTint="#526477"
-        app:rippleColor="@color/white"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="542dp" />
+        android:gravity="center"
+        android:text="@string/your_trips_organized"
+        android:textColor="#0F172A"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivHeroBanner" />
+
+    <!-- Subtitle / Description -->
+    <TextView
+        android:id="@+id/tvWelcomeSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/track_vacations_hotels_and_custom_excursions_in_one_place_with_built_in_schedule_alerts"
+        android:textColor="#475569"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeTitle" />
+
+    <!-- Primary Call-to-Action Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEnter"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/enter"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#1E293B"
+        app:cornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
