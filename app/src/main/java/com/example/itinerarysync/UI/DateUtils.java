@@ -13,6 +13,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.format.DateTimeParseException;
+import java.time.format.ResolverStyle;
 import java.util.Locale;
 
 public final class DateUtils {
@@ -20,8 +21,9 @@ public final class DateUtils {
     public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("MM/dd/yyyy", Locale.US);
 
     private static final DateTimeFormatter FLEXIBLE_PARSER = new DateTimeFormatterBuilder()
-            .appendPattern("[MM/dd/yyyy][M/d/yyyy][MM/d/yyyy][M/dd/yyyy]")
-            .toFormatter(Locale.US);
+            .appendPattern("[MM/dd/uuuu][M/d/uuuu][MM/d/uuuu][M/dd/uuuu]")
+            .toFormatter(Locale.US)
+            .withResolverStyle(ResolverStyle.STRICT);
 
     private DateUtils() {
     }
